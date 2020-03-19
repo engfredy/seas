@@ -12,19 +12,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <title>SEAS Dashboard</title>
+  <title>SEAS Notifications</title>
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="../template/plugins/fontawesome-free/css/all.min.css">
-     <!-- Select2 -->
-  <link rel="stylesheet" href="../template/plugins/select2/css/select2.min.css">
-  <link rel="stylesheet" href="../template/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../template/dist/css/adminlte.min.css">
   <!-- Jsgrid -->
   <link rel="stylesheet" href="../template/plugins/jsgrid/jsgrid.min.css">
   <link rel="stylesheet" href="../template/plugins/jsgrid/jsgrid-theme.min.css">
-
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
@@ -48,7 +44,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
             <li class="nav-item">
-              <a href="index.php" class="nav-link active">
+              <a href="index.php" class="nav-link">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>Dashboard</p>
               </a>
@@ -72,7 +68,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 
             <li class="nav-item">
-              <a href="notification.php" class="nav-link">
+              <a href="notification.php" class="nav-link active">
                 <i class="nav-icon fas fa-bell"></i>
                 <p>Notifications</p>
               </a>
@@ -172,20 +168,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <div class="card">
             <div class="card-header">
               <h3 class="card-title text-info">
-              <span style="font-size: 16px;">
-              <i class="fas fa-calendar-alt"></i>
-                &nbsp;&nbsp;&nbsp;
-                Attendance
-              </span>
+              <i class="far fa-calendar"></i>
+              &nbsp;&nbsp;&nbsp;
+              Attendance
               </h3>
-
-              <div class="card-tools">
-                <select name="" id="" class="form-control form-control-sm rounded-0 text-sm">
-                  <option><i class="fa fa-home"></i> All Branches</option>
-                  <option>Branch one</option>
-                  <option>Branch two</option>
-                </select>
-              </div>
             </div>
             <div class="card-body">
               <div id="jsGrid" class="text-sm"></div>
@@ -213,8 +199,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <!-- jQuery -->
   <script src="../template/plugins/jquery/jquery.min.js"></script>
-  <!-- Select2 -->
-  <script src="../template/plugins/select2/js/select2.full.min.js"></script>
   <!-- Bootstrap 4 -->
   <script src="../template/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- AdminLTE App -->
@@ -328,11 +312,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
     });
   </script>
 
-  <script>
-    $(function(){
-      $('.select2').select2();
-    })
-  </script>
 
 </body>
 

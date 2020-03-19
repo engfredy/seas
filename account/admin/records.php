@@ -12,10 +12,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <title>SEAS Dashboard</title>
+  <title>SEAS Records</title>
 
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="../template/plugins/fontawesome-free/css/all.min.css">
+   <!-- Font Awesome Icons -->
+   <link rel="stylesheet" href="../template/plugins/fontawesome-free/css/all.min.css">
+   <!-- daterange picker -->
+   <link rel="stylesheet" href="../template/plugins/daterangepicker/daterangepicker.css">
      <!-- Select2 -->
   <link rel="stylesheet" href="../template/plugins/select2/css/select2.min.css">
   <link rel="stylesheet" href="../template/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
@@ -48,14 +50,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
             <li class="nav-item">
-              <a href="index.php" class="nav-link active">
+              <a href="index.php" class="nav-link">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>Dashboard</p>
               </a>
             </li>
 
             <li class="nav-item">
-              <a href="records.php" class="nav-link">
+              <a href="records.php" class="nav-link active">
                 <i class="nav-icon fas fa-database"></i>
                 <p>Attendance Records</p>
               </a>
@@ -173,18 +175,24 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="card-header">
               <h3 class="card-title text-info">
               <span style="font-size: 16px;">
-              <i class="fas fa-calendar-alt"></i>
+                <i class="fa fa-database"></i>
                 &nbsp;&nbsp;&nbsp;
-                Attendance
+                Attendance Records
               </span>
               </h3>
 
               <div class="card-tools">
-                <select name="" id="" class="form-control form-control-sm rounded-0 text-sm">
-                  <option><i class="fa fa-home"></i> All Branches</option>
-                  <option>Branch one</option>
-                  <option>Branch two</option>
-                </select>
+              <div>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text rounded-0">
+                        <i class="far fa-calendar-alt"></i>
+                      </span>
+                    </div>
+                    <input type="text" class="form-control float-right form-control-sm rounded-0" id="reservation">
+                  </div>
+                  <!-- /.input group -->
+                </div>
               </div>
             </div>
             <div class="card-body">
@@ -217,9 +225,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <script src="../template/plugins/select2/js/select2.full.min.js"></script>
   <!-- Bootstrap 4 -->
   <script src="../template/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Moments --> 
+  <script src="../template/plugins/moment/moment.min.js"></script>
   <!-- AdminLTE App -->
   <script src="../template/dist/js/adminlte.min.js"></script>
   <script src="../template/plugins/jsgrid/jsgrid.min.js"></script>
+  <!-- date-range-picker -->
+    <script src="../template/plugins/daterangepicker/daterangepicker.js"></script>
 
 
   <script>
@@ -330,7 +342,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <script>
     $(function(){
-      $('.select2').select2();
+        //Date range picker
+        $('#reservation').daterangepicker()
     })
   </script>
 
