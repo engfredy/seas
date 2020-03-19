@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SEAS</title>
+    <link rel="stylesheet" href="./assets/css/boostrap.min.css" />
+    <link rel="stylesheet" href="./node_modules/pretty-checkbox/dist/pretty-checkbox.min.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/main.css" />
+  </head>
+
+  <body>
+    <div class="element-1">
+        seas <br>
+        <small>smart employee application system</small>
+    </div>
+    <div class="yellow-bg body">
+        <div class="login-container">
+            <div class="text-center logo-container">
+              <img src="./assets/images/logo.svg" alt="" />
+            </div>
+      
+            <div class="custom-input-group">
+              <label for="username" id="username_label">Username</label>
+              <input type="text" id="username" name="username" placeholder="Username" />
+            </div>
+      
+            <div class="custom-input-group">
+              <label for="Password" id="password_label">Password</label>
+              <input type="password" id="password" name="password" placeholder="Password" />
+            </div>
+      
+            <div class="remember_me">
+              <div class="pretty p-default">
+                  <input type="checkbox" />
+                  <div class="state p-info" style="margin-top: -1.5px;">
+                      <label style="font-size: 12px;">&nbsp;&nbsp;Remember me</label>
+                  </div>
+              </div>
+            </div>
+            <div class="btn-login">log in</div>
+            <div class="orCreate"><small class="text-muted">or Create New Account</small class="text-muted"></div>
+            <div class="iforget">
+              <i class="far fa-question-circle text-warning"></i>
+              &nbsp;&nbsp;
+              <span>I forget my password</span>
+             </div>
+          </div>
+    </div>
+
+<script src="./node_modules/@fortawesome/fontawesome-free/css/all.min.js"></script>
+<script>
+    let username = document.getElementById("username");
+    let password = document.getElementById("password");
+    let username_label = document.getElementById("username_label");
+    let password_label = document.getElementById("password_label");
+
+    if(username.value.length == 0) {
+        username_label.style.display = "none";
+    }else {
+        username_label.style.display = "inline-block";
+    }
+
+
+    if(password.value.length == 0) {
+        password_label.style.display = "none";
+    }else {
+        password_label.style.display = "inline-block";
+    }
+
+    username.onkeydown = function() {
+        if(username.value == '' || username.value == null || username.value.length == 0) {
+            hide_label(username_label);
+        }else {
+            show_label(username_label);
+        }
+    }
+
+    password.onkeydown = function() {
+        if(password.value == '' || password.value == null || password.value.length == 0) {
+            hide_label(password_label);
+        }else {
+            show_label(password_label);
+        }
+    }
+
+
+    function show_label(label) {
+        label.style.transition = "0.45s ease-out";
+        label.style.display = "inline-block";
+    }
+
+    function hide_label(label) {
+        label.style.transition = "0.45s ease-out";
+        label.style.display = "none";
+    }
+</script>
+  </body>
+</html>

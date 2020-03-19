@@ -1,0 +1,15 @@
+{
+  "name": "seas",
+  "version": "1.0.0",
+  "description": "smart employee attendance system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "musa a mtuya",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.1",
+    "pretty-checkbox": "^3.0.3"
+  }
+}
