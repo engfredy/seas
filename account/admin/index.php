@@ -234,7 +234,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       },
       {
         "sn": 2,
-        "name": "Amadeus George Mari",
+        "name": "Fredrick Mkunda",
         "title": "System Adminstrator",
         "check-in": "06:20",
         "check-out": "16:20",
